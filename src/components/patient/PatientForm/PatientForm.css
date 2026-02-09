@@ -1,0 +1,68 @@
+.patient-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	padding: 1.2rem;
+	max-height: 80vh;
+	width: 70vw;
+	overflow: auto;
+}
+
+.patient-form__form {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.patient-form__buttons {
+	display: flex;
+	gap: 1.2rem;
+	justify-content: space-between;
+}
+
+.patient-form__input-container {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+}
+
+.patient-form__error {
+	font-size: 0.8rem;
+	color: var(--color-error);
+}
+
+.patient-form__label--error {
+	color: var(--color-error);
+}
+
+.patient-form__input--error,
+.patient-form__textarea--error {
+	border: 1px solid var(--color-error);
+}
+
+.patient-form__form textarea {
+	width: 100%;
+	resize: none;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.patient-form__cancel-button {
+	border: 1px solid var(--button-secondary-border);
+	background-color: var(--button-secondary-border-bg);
+	color: var(--color-primary-700);
+	padding: 0.4rem;
+	border-radius: 0.3rem;
+}
+
+.patient-form__confirm-button {
+	border: 1px solid var(--button-primary-border);
+	background-color: var(--button-primary-bg);
+	color: var(--button-primary-text);
+	padding: 0.4rem;
+	border-radius: 0.3rem;
+}
+
+.patient-form__confirm-button:disabled {
+	opacity: 0.7;
+}

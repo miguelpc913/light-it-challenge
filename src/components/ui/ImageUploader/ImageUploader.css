@@ -1,0 +1,107 @@
+.image-uploader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.image-uploader__input {
+  display: none;
+}
+
+.image-uploader__dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem;
+  border: 2px dashed var(--border-default);
+  border-radius: 0.5rem;
+  background-color: var(--bg-page);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 120px;
+}
+
+.image-uploader__dropzone:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-primary-50);
+}
+
+.image-uploader__dropzone--dragging {
+	border-color: var(--color-primary-500);
+	background-color: var(--color-primary-100);
+	transform: scale(1.02);
+}
+
+.image-uploader__dropzone--error {
+	border-color: var(--color-error);
+}
+
+.image-uploader__dropzone:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.image-uploader__icon {
+  font-size: 2rem;
+  color: var(--color-primary-500);
+}
+
+.image-uploader__text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.image-uploader__hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.image-uploader__preview {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--border-default);
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.image-uploader__preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-uploader__remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-error);
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.image-uploader__remove:hover {
+  background-color: var(--color-error);
+  transform: scale(1.1);
+}
+
+.image-uploader__error {
+  font-size: 0.8rem;
+  color: var(--color-error);
+  margin: 0;
+  text-align: center;
+}

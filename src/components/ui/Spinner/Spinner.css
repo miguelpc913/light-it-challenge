@@ -1,0 +1,111 @@
+.ldsSpinner {
+  display: block;
+  position: relative;
+  width: 3.75rem;
+  height: 3.75rem;
+  margin: 4.375rem auto;
+}
+
+.ldsSpinner div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 1.875rem 1.875rem;
+}
+
+.ldsSpinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0.625rem;
+  left: 0.6875rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background: #183153;
+  transform: scale(0);
+  opacity: 0.5;
+  animation: pulse0112 0.9s ease-in-out infinite;
+  box-shadow: 0 0 1.25rem rgba(18, 31, 53, 0.3);
+}
+
+.ldsSpinner div:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.ldsSpinner div:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.ldsSpinner div:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+.ldsSpinner div:nth-child(4) {
+  transform: rotate(135deg);
+}
+
+.ldsSpinner div:nth-child(5) {
+  transform: rotate(180deg);
+}
+
+.ldsSpinner div:nth-child(6) {
+  transform: rotate(225deg);
+}
+
+.ldsSpinner div:nth-child(7) {
+  transform: rotate(270deg);
+}
+
+.ldsSpinner div:nth-child(8) {
+  transform: rotate(315deg);
+}
+
+.ldsSpinner div:nth-child(1):after {
+  animation-delay: -0.875s;
+}
+
+.ldsSpinner div:nth-child(2):after {
+  animation-delay: -0.75s;
+}
+
+.ldsSpinner div:nth-child(3):after {
+  animation-delay: -0.625s;
+}
+
+.ldsSpinner div:nth-child(4):after {
+  animation-delay: -0.5s;
+}
+
+.ldsSpinner div:nth-child(5):after {
+  animation-delay: -0.375s;
+}
+
+.ldsSpinner div:nth-child(6):after {
+  animation-delay: -0.25s;
+}
+
+.ldsSpinner div:nth-child(7):after {
+  animation-delay: -0.125s;
+}
+
+.ldsSpinner div:nth-child(8):after {
+  animation-delay: 0s;
+}
+
+@keyframes pulse0112 {
+
+  0%,
+  100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+

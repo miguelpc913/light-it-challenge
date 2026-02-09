@@ -1,0 +1,24 @@
+.patient-card__description {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	transition: max-height 0.15s ease-in;
+	max-height: 1200px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.patient-card__description--collapsed {
+	max-height: 0;
+	transition: max-height 0.15s ease-out;
+}
+
+.patient-card__description-text {
+	color: var(--text-secondary);
+}
+
+.patient-card__description-date {
+	margin-left: auto;
+	font-size: 0.8rem;
+	color: var(--text-muted);
+}

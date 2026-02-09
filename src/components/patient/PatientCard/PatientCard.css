@@ -1,0 +1,43 @@
+.patient-card {
+	background-color: var(--bg-card);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	align-items: center;
+	padding: 0.8rem;
+	border: 4px;
+	position: relative;
+}
+
+.patient-card__edit-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+}
+
+.patient-card__edit-toggle {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background-color: var(--button-primary-bg);
+	opacity: 0;
+	transition: all 0.2s ease-in;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.patient-card:hover .patient-card__edit-toggle {
+	opacity: 1;
+}
+
+.patient-card__edit-toggle svg {
+	height: 12px;
+	width: 12px;
+	color: var(--bg-card);
+}

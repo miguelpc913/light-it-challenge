@@ -1,0 +1,8 @@
+.auto-textarea {
+	width: 100%;
+	resize: none;
+	overflow: hidden;
+	box-sizing: border-box;
+	width: 500px;
+	font-family: var(--font-primary);
+}

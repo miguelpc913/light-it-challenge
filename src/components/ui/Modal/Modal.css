@@ -1,0 +1,32 @@
+.modal__backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	width: 100vw;
+	height: 100vh;
+	backdrop-filter: blur(0.625rem);
+	-webkit-backdrop-filter: blur(0.625rem);
+	filter: blur(0.625rem);
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 99999;
+	min-width: 30%;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	box-shadow: 0rem 0.1875rem 0.375rem #00000029;
+	border-radius: 4px;
+	background-color: var(--bg-card);
+}
+
+@media (max-width: 480px) {
+	.modal {
+		width: 85%;
+	}
+}
