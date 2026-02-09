@@ -10,10 +10,12 @@ export default function useAutoTextArea() {
   }
 
   useEffect(() => {
-    if (ref.current !== null) {
-      const el = ref.current;
-      el.style.height = el.scrollHeight + "px";
-    }
+    setTimeout(() => {
+      if (ref.current !== null) {
+        const el = ref.current;
+        el.style.height = el.scrollHeight + "px";
+      }
+    });
   }, [ref]);
   return {
     ref,
