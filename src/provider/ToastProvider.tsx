@@ -10,7 +10,7 @@ type ToastContextValue = {
   clear: () => void;
 };
 
-export const ToastContext = createContext<ToastContextValue | null>(null);
+const ToastContext = createContext<ToastContextValue | null>(null);
 
 export function ToastProvider({ children }: { children: React.ReactNode }) {
   const [toasts, setToasts] = useState<ToastInput[]>([]);

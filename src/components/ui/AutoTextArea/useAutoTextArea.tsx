@@ -14,7 +14,7 @@ export default function useAutoTextArea() {
       const el = ref.current;
       el.style.height = el.scrollHeight + "px";
     }
-  }, [ref.current]);
+  }, [ref]);
   return {
     ref,
     handleInput,

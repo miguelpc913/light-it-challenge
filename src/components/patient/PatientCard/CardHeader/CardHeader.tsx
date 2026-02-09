@@ -20,6 +20,7 @@ export default function CardHeader({
 }: Props) {
   const [hasAvatar, setHasAvatar] = useState(!!patient.avatar);
   useEffect(() => {
+    // Retry in case avatar has changed
     if (patient.avatar) {
       setHasAvatar(!!patient.avatar);
     }

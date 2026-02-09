@@ -32,7 +32,7 @@ export default function QueryWrapper<T>(props: Props<T>) {
         description: errorMessage,
       });
     }
-  }, [errorMessage]);
+  }, [errorMessage, addToast]);
   if (status === "pending") {
     return <Spinner></Spinner>;
   } else if (status === "error") {

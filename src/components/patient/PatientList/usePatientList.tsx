@@ -18,18 +18,18 @@ export default function usePatientList() {
   });
   const setPatients = usePatients((state) => state.setPatients);
   const allPatients = usePatients((state) => state.patients);
-  
+
   useEffect(() => {
     if (!query.isPending && query.data) {
       setPatients(query.data);
     }
-  }, [query.isPending]);
-  
+  }, [query.isPending, query.data, setPatients]);
+
   const filteredPatients = useMemo(() => {
     if (!searchQuery.trim()) {
       return allPatients;
     }
-    
+
     const query = searchQuery.toLowerCase().trim();
     return allPatients.filter((patient) => {
       return (
@@ -39,11 +39,11 @@ export default function usePatientList() {
       );
     });
   }, [allPatients, searchQuery]);
-  
+
   const handleCreateModalToggle = () => {
     setIsCreateModalOpen((prevState) => !prevState);
   };
-  
+
   return {
     patients: filteredPatients,
     handleCreateModalToggle,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
 
 type Props = {
@@ -33,7 +33,7 @@ export const Portal = ({
     return el;
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (append) {
       document.querySelector(target)?.appendChild(container);
     } else {
@@ -42,7 +42,7 @@ export const Portal = ({
     return () => {
       document.querySelector(target)?.removeChild(container);
     };
-  }, []);
+  }, [append, container, target]);
 
   return createPortal(children, container);
 };

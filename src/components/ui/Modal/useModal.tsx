@@ -14,7 +14,7 @@ export default function useModal({
     if (!isModalOpen && onClose) {
       onClose();
     }
-  }, [isModalOpen]);
+  }, [isModalOpen, onClose, onOpen]);
 
   const handleClose = () => {
     setIsModalOpen(false);
