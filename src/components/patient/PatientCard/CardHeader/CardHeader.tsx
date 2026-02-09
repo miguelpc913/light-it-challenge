@@ -26,7 +26,7 @@ export default function CardHeader({
   }, [patient.avatar]);
   return (
     <div className="patient-card__header">
-      <div style={{ position: "relative" }}>
+      <div className="patient-card__icon">
         {hasAvatar ? (
           <img
             src={patient.avatar}
@@ -54,7 +54,10 @@ export default function CardHeader({
         <span className="patient-card__website">{patient.website}</span>
       </div>
 
-      <button onClick={handleCollapse} className="patient-card__collapse-button">
+      <button
+        onClick={handleCollapse}
+        className="patient-card__collapse-button"
+      >
         {isCollapsed ? <FaChevronDown /> : <FaChevronUp />}
       </button>
     </div>
